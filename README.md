@@ -1,13 +1,13 @@
-#jf-standalone-launcher
+# jf-standalone-launcher
 
-#配置
+# 配置
 - launcher.sh.example -> launcher.sh
 - jf-app-cfg.txt.example -> jf-app-cfg.txt
 - log4j.properties.example -> log4j.properties
 - 确保 jf-app-cfg.txt中的app.name与 launcher.shd中的APP名字一致
 - 运行 ```bash sh cplibs.sh```
 
-#standalone App 结构
+# Standalone App 结构
 
 ```bash
 .
@@ -31,3 +31,6 @@
 ├── logging.properties
 └── tree.txt
 ```
+# 运行 Standalone App
+
+``` sh laucher.sh start|stop id```
