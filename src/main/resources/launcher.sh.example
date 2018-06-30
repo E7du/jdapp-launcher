@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-APP="jlauncher"
+APP="launcher"
 JAVA_CMD="java"
 CPATH="./:lib/*"
 ID="1"

@@ -14,7 +14,7 @@
 # ->. db.showsql: ture, show execute sql;
 #---------------------------------------------------------------------------------#
 db.ds = mysql
-db.mysql.active = true
+db.mysql.active = false
 #db.mysql.url = 192.168.52.148/jf
 #db.mysql.user = root
 #db.mysql.password.pkey = MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJbIzkTcjrlDwB3vdc6gKwJ5gAMGRazWOrOeuMCxI2Lb7n/d4DoBySUdM+7HT6Gkfbfz6BM1o/2Gp0PkhkEHAx8CAwEAAQ==
