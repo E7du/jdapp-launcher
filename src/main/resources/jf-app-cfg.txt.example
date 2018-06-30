@@ -56,4 +56,4 @@ app.dev = true
 app.uploads.basedir = /var/uploads
 app.downloads.basedir = /var/downloads
 app.post = false
-app.name = jlauncher
+app.name = launcher
