@@ -51,7 +51,7 @@ public final class LauncherServer implements IServer {
 		
 		System.out.println(String.format("The server `%s%d` launched...", this.serverName, this.serverId));
 		System.setProperty("java.net.preferIPv4Stack", "true");
-		classPathXmlApplicationContext = new ClassPathXmlApplicationContext(new String[]{String.format("%s-provider.xml", this.serverName)});
+		classPathXmlApplicationContext = new ClassPathXmlApplicationContext(new String[]{String.format("conf/%s-provider.xml", this.serverName)});
 		classPathXmlApplicationContext.start();
 		return ret;
 	}
