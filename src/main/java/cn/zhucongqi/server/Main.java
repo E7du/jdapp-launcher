@@ -20,6 +20,9 @@ public class Main {
 	 * @throws InterruptedException 
 	 */
 	public static void main(String[] ids) throws InterruptedException {
+
+		PropertyConfigurator.configure("conf/log4j.properties");
+		
 		Integer id = 1;
 		boolean debug = true;
 		if (ids.length > 0) {
