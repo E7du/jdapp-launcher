@@ -7,6 +7,8 @@ import org.apache.log4j.PropertyConfigurator;
 
 import com.jfinal.log.Log;
 
+import cn.zhucongqi.server.core.LauncherServer;
+
 /**
  * @author Jobsz
  */

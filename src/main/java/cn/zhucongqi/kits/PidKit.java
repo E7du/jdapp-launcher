@@ -10,7 +10,7 @@ import java.lang.management.ManagementFactory;
 
 import com.jfinal.log.Log;
 
-import cn.zhucongqi.server.IServer;
+import cn.zhucongqi.server.core.IServer;
 
 /**
  * @author Jobsz

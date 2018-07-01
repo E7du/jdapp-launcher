@@ -1,7 +1,7 @@
 /**
  * 
  */
-package cn.zhucongqi.server;
+package cn.zhucongqi.server.core;
 
 /**
  * IServer.java

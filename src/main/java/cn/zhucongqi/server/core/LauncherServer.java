@@ -1,7 +1,9 @@
 /**
  * 
  */
-package cn.zhucongqi.server;
+package cn.zhucongqi.server.core;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.jfinal.ext.config.JFinalConfigExt;
 import com.jfinal.ext.config.StandaloneAppConfig;
@@ -19,7 +21,9 @@ public final class LauncherServer implements IServer {
 	
 	private String serverName = "";
 	private Integer serverId = 0;
-	
+
+	private ClassPathXmlApplicationContext classPathXmlApplicationContext = null;
+
 	private LauncherServer() {}
 	
 	@Override
@@ -46,6 +50,9 @@ public final class LauncherServer implements IServer {
 		}
 		
 		System.out.println(String.format("The server `%s%d` launched...", this.serverName, this.serverId));
+		System.setProperty("java.net.preferIPv4Stack", "true");
+		classPathXmlApplicationContext = new ClassPathXmlApplicationContext(new String[]{String.format("%s-provider.xml", this.serverName)});
+		classPathXmlApplicationContext.start();
 		return ret;
 	}
 }
