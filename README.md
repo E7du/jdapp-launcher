@@ -11,9 +11,17 @@
 
 ```bash
 .
-├── jf-app-cfg.txt
+├── conf
+│   ├── jf-app-cfg.conf
+│   ├── jf-app-cfg.txt.false
+│   ├── jf-app-cfg.txt.true
+│   ├── launcher-consumer.xml
+│   └── launcher-provider.xml
+├── dubbo.properties
+├── launcher-consumer.sh
 ├── launcher.sh
 ├── lib
+│   ├── *
 │   ├── cglib-nodep-3.2.5.jar
 │   ├── commons-collections-3.2.2.jar
 │   ├── commons-lang3-3.1.jar
@@ -27,12 +35,13 @@
 │   ├── log4j-1.2.17.jar
 │   ├── mysql-connector-java-8.0.11.jar
 │   └── protobuf-java-2.6.0.jar
-├── services
-│   ├── xx.jar
-│   └── yy.jar
 ├── log4j.properties
 ├── logging.properties
-└── *-provider.xml
+└── services
+    ├── service-1.jar
+    ├── service-2.jar
+    └── service-models.jar
+
 ```
 # 运行 Standalone App
 
