@@ -27,6 +27,9 @@
 │   ├── log4j-1.2.17.jar
 │   ├── mysql-connector-java-8.0.11.jar
 │   └── protobuf-java-2.6.0.jar
+├── services
+│   ├── xx.jar
+│   └── yy.jar
 ├── log4j.properties
 ├── logging.properties
 └── *-provider.xml

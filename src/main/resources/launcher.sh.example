@@ -2,7 +2,7 @@
 
 APP="launcher"
 JAVA_CMD="java"
-CPATH="./:lib/*"
+CPATH="./:lib/*:./services/*"
 ID="1"
 if [ "x$2" != "x" ]
 then 
