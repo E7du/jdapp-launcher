@@ -29,7 +29,7 @@
 │   └── protobuf-java-2.6.0.jar
 ├── log4j.properties
 ├── logging.properties
-└── tree.txt
+└── *-provider.xml
 ```
 # 运行 Standalone App
 
