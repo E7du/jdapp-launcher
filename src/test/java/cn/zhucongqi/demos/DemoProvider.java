@@ -1,13 +1,13 @@
 package cn.zhucongqi.demos;
 import org.junit.jupiter.api.Test;
 
-import cn.zhucongqi.server.Main;
+import cn.zhucongqi.server.core.Launcher;
 
 class DemoProvider {
 
 	@Test
 	void test() throws InterruptedException {
-		Main.main(new String[] {});
+		Launcher.laucher(new String[] {}) ;
 	}
 
 }

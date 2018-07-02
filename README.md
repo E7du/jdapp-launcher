@@ -17,7 +17,7 @@
 ├── dubbo.properties
 ├── launcher.sh
 ├── lib
-│   ├── *
+│   ├── *dependency libs
 │   ├── cglib-nodep-3.2.5.jar
 │   ├── commons-collections-3.2.2.jar
 │   ├── commons-lang3-3.1.jar
