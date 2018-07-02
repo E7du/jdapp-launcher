@@ -2,10 +2,10 @@
 
 # 配置
 - launcher.sh.example -> launcher.sh
-- cp jf-ext3 : jf-app-cfg.txt.example -> jf-app-cfg.txt
+- cp jf-ext3 : jf-app-cfg.conf.example -> jf-app-cfg.conf
 - cp jf-ext3: log4j.properties.example -> log4j.properties
-- 确保 jf-app-cfg.txt中的app.name与 launcher.shd中的APP名字一致
-- 运行 ```bash sh cplibs.sh```
+- 确保 jf-app-cfg.conf中的app.name与 launcher.sh中的APP名字一致
+- 运行 ``` sh cplibs.sh```
 
 # Standalone App 结构
 
