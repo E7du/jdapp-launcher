@@ -13,8 +13,6 @@
 .
 ├── conf
 │   ├── jf-app-cfg.conf
-│   ├── jf-app-cfg.txt.false
-│   ├── jf-app-cfg.txt.true
 │   ├── launcher-consumer.xml
 │   └── launcher-provider.xml
 ├── dubbo.properties
