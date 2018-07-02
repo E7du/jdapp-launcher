@@ -3,7 +3,7 @@ import org.junit.jupiter.api.Test;
 
 import cn.zhucongqi.server.Main;
 
-class TestLauncher {
+class DemoProvider {
 
 	@Test
 	void test() throws InterruptedException {

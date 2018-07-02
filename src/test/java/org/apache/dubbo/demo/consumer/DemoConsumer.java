@@ -20,7 +20,7 @@ import org.apache.dubbo.demo.DemoService;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class Consumer {
+public class DemoConsumer {
 
     private static ClassPathXmlApplicationContext context;
 
