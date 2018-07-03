@@ -42,3 +42,9 @@
 # 运行 Standalone App
 
 ``` sh laucher.sh start|stop id```
+
+# Demo
+
+- download zookeper, ``` mv zoo_sample.cfg zoo.cfg```
+- Provider: run DemoProvider.java
+- Consumer: run DemoConsumer.java
