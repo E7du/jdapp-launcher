@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>cn.zhucongqi</groupId>
   <artifactId>jf-standalone-launcher</artifactId>
-  <version>0.0.1</version>
+  <version>0.0.2-SNAPSHOT</version>
   <name>jlauncher</name>
   <description>jf-standalone-launcher</description>
   <url>https://github.com/E7du/jf-standalone-launcher/</url>
