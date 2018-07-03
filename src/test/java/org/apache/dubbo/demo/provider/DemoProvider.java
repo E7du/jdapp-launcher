@@ -1,4 +1,4 @@
-package cn.zhucongqi.demos;
+package org.apache.dubbo.demo.provider;
 import org.junit.jupiter.api.Test;
 
 import cn.zhucongqi.server.core.Launcher;
