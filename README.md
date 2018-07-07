@@ -13,8 +13,8 @@
 .
 ├── conf
 │   ├── jf-app-cfg.conf
+│   ├── dubbo.properties
 │   └── launcher-provider.xml
-├── dubbo.properties
 ├── launcher.sh
 ├── lib
 │   ├── *dependency libs

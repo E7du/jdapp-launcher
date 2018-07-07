@@ -9,6 +9,7 @@ then
 	ID="$2";
 fi
 PIDFILE="${APP}${ID}.pid"
+DUBBO_CFG="dubbo.properties.file=conf/dubbo.properties"
 
 case $1 in
 start)
@@ -19,7 +20,7 @@ start)
          exit 0
       fi
     fi
-	${JAVA_CMD} -cp ${CPATH} -server cn.zhucongqi.server.Main ${ID} &
+	${JAVA_CMD} -cp ${CPATH} -server -D${DUBBO_CFG} cn.zhucongqi.server.Main ${ID} &
 	;;
 stop)
 	echo "Stoping Server ${APP}${ID}..."
