@@ -14,6 +14,7 @@
 ├── conf
 │   ├── jf-app-cfg.conf
 │   ├── dubbo.properties
+│   ├── log4j.properties
 │   └── launcher-provider.xml
 ├── launcher.sh
 ├── lib
@@ -31,8 +32,6 @@
 │   ├── log4j-1.2.17.jar
 │   ├── mysql-connector-java-8.0.11.jar
 │   └── protobuf-java-2.6.0.jar
-├── log4j.properties
-├── logging.properties
 └── services
     ├── service-1.jar
     ├── service-2.jar
