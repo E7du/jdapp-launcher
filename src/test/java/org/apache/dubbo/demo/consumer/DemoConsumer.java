@@ -20,32 +20,54 @@ import org.apache.dubbo.demo.DemoService;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import com.alibaba.dubbo.config.ApplicationConfig;
+import com.alibaba.dubbo.config.ReferenceConfig;
+
 public class DemoConsumer {
 
-    private static ClassPathXmlApplicationContext context;
+	private static ClassPathXmlApplicationContext context;
 
-    
-    @Test
+
+	@Test
 	public void laucherConsumer() {
-        //Prevent to get IPV6 address,this way only work in debug mode
-        //But you can pass use -Djava.net.preferIPv4Stack=true,then it work well whether in debug mode or not
-        System.setProperty("java.net.preferIPv4Stack", "true");
-        context = new ClassPathXmlApplicationContext(new String[]{"conf/demo-consumer.xml"});
-        context.start();
-        DemoService demoService = (DemoService) context.getBean("demoService"); // get remote service proxy
+		//Prevent to get IPV6 address,this way only work in debug mode
+		//But you can pass use -Djava.net.preferIPv4Stack=true,then it work well whether in debug mode or not
+		System.setProperty("java.net.preferIPv4Stack", "true");
+		context = new ClassPathXmlApplicationContext(new String[]{"conf/demo-consumer.xml"});
+		context.start();
+		DemoService demoService = (DemoService) context.getBean("demoService"); // get remote service proxy
 
-        while (true) {
-            try {
-                Thread.sleep(1000);
-                String hello = demoService.sayHello("world"); // call remote method
-                System.out.println(hello); // get result
+		while (true) {
+			try {
+				Thread.sleep(1000);
+				String hello = demoService.sayHello("world"); // call remote method
+				System.out.println(hello); // get result
 
-            } catch (Throwable throwable) {
-                throwable.printStackTrace();
-            }
+			} catch (Throwable throwable) {
+				throwable.printStackTrace();
+			}
+		}
+	}
 
 
-        }
-
-    }
+	@Test
+	public void laucnherApiConfConsumer() {
+		//Explicit Target
+		ApplicationConfig application = new ApplicationConfig();
+		application.setName("dubbo-demo-app");
+		ReferenceConfig<DemoService> reference = new ReferenceConfig<DemoService>();
+		reference.setApplication(application);
+		reference.setInterface(DemoService.class);
+		reference.setUrl("dubbo://127.0.0.1:20880/org.apache.dubbo.demo.DemoService");
+		DemoService demoService = reference.get();
+		while (true) {
+			try {
+				Thread.sleep(1000);
+				String hello = demoService.sayHello("world"); // call remote method
+				System.out.println(hello); // get result
+			} catch (Throwable throwable) {
+				throwable.printStackTrace();
+			}
+		}
+	}
 }
