@@ -19,11 +19,12 @@ public final class AppKit {
 	
 	private static String format = "conf/%s%d.pid";
 	private static String application = "conf/application.app";
+	private static Log log = Log.getLog(AppKit.class);
 	
 	private static boolean saveApplicationName(String applicationName) {
 		File file = new File(String.format(AppKit.application, applicationName));
 		if (file.exists()) {
-			Log.getLog(AppKit.class).info("application.app file is exist.");
+			AppKit.log.info("application.app file is exist.");
 			return true;
 		}
 		try {
@@ -33,7 +34,7 @@ public final class AppKit {
 			out.close();
 		} catch (IOException ex) {
 			ex.printStackTrace();
-			Log.getLog(AppKit.class).error(ex.getMessage());
+			AppKit.log.error(ex.getMessage());
 			return false;
 		}
 		
@@ -45,7 +46,7 @@ public final class AppKit {
 
 		File file = new File(String.format(AppKit.format, server.serverName(), server.serverId()));
 		if (file.exists()) {
-			Log.getLog(AppKit.class).info("pid file is exist.");
+			AppKit.log.info("pid file is exist.");
 			return true;
 		}
 			
@@ -56,7 +57,7 @@ public final class AppKit {
 			out.close();
 		} catch (IOException ex) {
 			ex.printStackTrace();
-			Log.getLog(AppKit.class).error(ex.getMessage());
+			AppKit.log.error(ex.getMessage());
 			return false;
 		}
 		return true;
