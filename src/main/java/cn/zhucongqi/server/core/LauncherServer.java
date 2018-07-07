@@ -8,7 +8,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import com.jfinal.ext.config.JFinalConfigExt;
 import com.jfinal.ext.config.StandaloneAppConfig;
 
-import cn.zhucongqi.kits.PidKit;
+import cn.zhucongqi.kits.AppKit;
 
 /**
  * LauncherServer.java
@@ -46,7 +46,7 @@ public final class LauncherServer implements IServer {
 		this.serverId = serverId;
 		
 		if (ret) {
-			PidKit.save(this);
+			AppKit.save(this);
 		}
 		
 		System.out.println(String.format("The server `%s%d` launched...", this.serverName, this.serverId));
