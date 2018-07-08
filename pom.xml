@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>cn.zhucongqi</groupId>
   <artifactId>jdapp-launcher</artifactId>
-  <version>0.0.2-SNAPSHOT</version>
+  <version>0.0.2</version>
   <name>jdapp-launcher</name>
   <description>jdapp-launcher</description>
   <url>https://github.com/E7du/jdapp-launcher/</url>
