@@ -1,4 +1,5 @@
 # jf-standalone-launcher
+The standalone Dubbo App (Dapp) launcher base on jf and jf-ext3
 
 # 配置
 ```
@@ -8,7 +9,7 @@ $ cp conf/log4j.properties conf/log4j.properties
 $ sh cplibs.sh
 ```
 
-# Standalone App 结构
+# Standalone Dapp 结构
 
 ```bash
 .
@@ -17,7 +18,7 @@ $ sh cplibs.sh
 │   ├── dubbo.properties
 │   ├── log4j.properties
 │   ├── application.dapp
-│   ├── dapp-daemon*.pid
+│   ├── dapp-daemon{id}.pid
 │   └── {jf-app-cfg.conf:app.name}-provider.xml
 ├── launcher.sh
 ├── lib
@@ -41,7 +42,7 @@ $ sh cplibs.sh
     └── service-models.jar
 
 ```
-# 运行 Standalone App
+# 运行 Standalone Dapp
 
 ``` sh laucher.sh start|stop id```
 
