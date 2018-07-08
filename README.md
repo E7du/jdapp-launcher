@@ -17,8 +17,8 @@ $ sh cplibs.sh
 │   ├── jf-app-cfg.conf
 │   ├── dubbo.properties
 │   ├── log4j.properties
-│   ├── application.dapp
-│   ├── dapp-daemon{id}.pid
+│   ├── application.jdapp
+│   ├── jdapp-daemon{id}.pid
 │   └── {jf-app-cfg.conf:app.name}-provider.xml
 ├── jdapp-launcher.sh
 ├── lib

@@ -17,9 +17,9 @@ import cn.zhucongqi.server.core.IServer;
  */
 public final class AppKit {
 
-	private static String daemon = "dapp-daemon";
+	private static String daemon = "jdapp-daemon";
 	private static String format = "conf/%s%d.pid";
-	private static String application = "conf/application.dapp";
+	private static String application = "conf/application.jdapp";
 	private static Log log = Log.getLog(AppKit.class);
 	
 	private static boolean saveApplicationName(String applicationName) {

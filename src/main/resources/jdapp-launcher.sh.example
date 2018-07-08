@@ -9,8 +9,8 @@ then
 fi
 
 CFG_PATH="conf/"
-APPNAME=`cat "${CFG_PATH}application.dapp"`
-PIDFILE="${CFG_PATH}dapp-daemon${ID}.pid"
+APPNAME=`cat "${CFG_PATH}application.jdapp"`
+PIDFILE="${CFG_PATH}jdapp-daemon${ID}.pid"
 DUBBO_CFG="dubbo.properties.file=${CFG_PATH}dubbo.properties"
 LOG4J_CFG="log4j.configuration=${CFG_PATH}log4j.properties"
 
