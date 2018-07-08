@@ -1,11 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>cn.zhucongqi</groupId>
-  <artifactId>jf-standalone-launcher</artifactId>
+  <artifactId>jdapp-launcher</artifactId>
   <version>0.0.2-SNAPSHOT</version>
-  <name>jlauncher</name>
-  <description>jf-standalone-launcher</description>
-  <url>https://github.com/E7du/jf-standalone-launcher/</url>
+  <name>jdapp-launcher</name>
+  <description>jdapp-launcher</description>
+  <url>https://github.com/E7du/jdapp-launcher/</url>
 	<licenses>
 		<license>
 			<name>The Apache License, Version 2.0</name>
@@ -22,8 +22,8 @@
 	</developers>
 	<scm>
 		<connection>scm:git:git@github.com:E7du/jf-standalone-launcher.git</connection>
-		<developerConnection>scm:git:git@github.com:E7du/jf-standalone-launcher.git</developerConnection>
-		<url>git@github.com:E7du/jf-standalone-launcher.git</url>
+		<developerConnection>scm:git:git@github.com:E7du/jdapp-launcher.git</developerConnection>
+		<url>git@github.com:E7du/jdapp-launcher.git</url>
 	</scm>
 	<properties>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>

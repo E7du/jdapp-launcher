@@ -1,15 +1,15 @@
-# jf-standalone-launcher
-The standalone Dubbo App (Dapp) launcher base on jf and jf-ext3
+# JDApp-launcher
+The Java standalone Dubbo App (JDApp) launcher base on jf and jf-ext3
 
 # 配置
 ```
-$ cp launcher.sh.example launcher.sh
+$ cp jdapp-launcher.sh.example jdapp-launcher.sh
 $ cp conf.bak/jf-app-cfg.conf conf/jf-app-cfg.conf
 $ cp conf/log4j.properties conf/log4j.properties
 $ sh cplibs.sh
 ```
 
-# Standalone Dapp 结构
+# JDApp 结构
 
 ```bash
 .
@@ -20,7 +20,7 @@ $ sh cplibs.sh
 │   ├── application.dapp
 │   ├── dapp-daemon{id}.pid
 │   └── {jf-app-cfg.conf:app.name}-provider.xml
-├── launcher.sh
+├── jdapp-launcher.sh
 ├── lib
 │   ├── *dependency libs
 │   ├── cglib-nodep-3.2.5.jar
@@ -42,9 +42,9 @@ $ sh cplibs.sh
     └── service-models.jar
 
 ```
-# 运行 Standalone Dapp
+# 运行 JDApp
 
-``` sh laucher.sh start|stop id```
+``` sh jdapp-laucher.sh start|stop id```
 
 # Demo
 
