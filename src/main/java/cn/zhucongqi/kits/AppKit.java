@@ -16,15 +16,17 @@ import cn.zhucongqi.server.core.IServer;
  * @author Jobsz
  */
 public final class AppKit {
-	
+
+	private static String daemon = "dapp-daemon";
 	private static String format = "conf/%s%d.pid";
-	private static String application = "conf/application.app";
+	private static String application = "conf/application.dapp";
 	private static Log log = Log.getLog(AppKit.class);
 	
 	private static boolean saveApplicationName(String applicationName) {
-		File file = new File(String.format(AppKit.application, applicationName));
+		String fileName = String.format(AppKit.application, applicationName);
+		File file = new File(fileName);
 		if (file.exists()) {
-			AppKit.log.info("application.app file is exist.");
+			AppKit.log.info(fileName+" is exist.");
 			return true;
 		}
 		try {
@@ -44,9 +46,10 @@ public final class AppKit {
 	private static boolean savePid(IServer server) {
 		String pid = AppKit.currentAppPid();  
 
-		File file = new File(String.format(AppKit.format, server.serverName(), server.serverId()));
+		String fileName = String.format(AppKit.format, AppKit.daemon, server.serverId());
+		File file = new File(fileName);
 		if (file.exists()) {
-			AppKit.log.info("pid file is exist.");
+			AppKit.log.info(fileName+" is exist.");
 			return true;
 		}
 			

@@ -1,11 +1,12 @@
 # jf-standalone-launcher
 
 # 配置
-- launcher.sh.example -> launcher.sh
-- cp jf-ext3 : jf-app-cfg.conf.example -> jf-app-cfg.conf
-- cp jf-ext3: log4j.properties.example -> log4j.properties
-- 确保 jf-app-cfg.conf中的app.name与 launcher.sh中的APP名字一致
-- 运行 ``` sh cplibs.sh```
+```
+$ cp launcher.sh.example launcher.sh
+$ cp conf.bak/jf-app-cfg.conf conf/jf-app-cfg.conf
+$ cp conf/log4j.properties conf/log4j.properties
+$ sh cplibs.sh
+```
 
 # Standalone App 结构
 
@@ -15,7 +16,9 @@
 │   ├── jf-app-cfg.conf
 │   ├── dubbo.properties
 │   ├── log4j.properties
-│   └── launcher-provider.xml
+│   ├── application.dapp
+│   ├── dapp-daemon*.pid
+│   └── {jf-app-cfg.conf:app.name}-provider.xml
 ├── launcher.sh
 ├── lib
 │   ├── *dependency libs
