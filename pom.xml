@@ -4,7 +4,7 @@
   <artifactId>jdapp-launcher</artifactId>
   <version>0.0.3</version>
   <name>jdapp-launcher</name>
-  <description>jdapp-launcher</description>
+  <description>The Java standalone Dubbo App (JDApp) launcher base on jf and jf-ext3.</description>
   <url>https://github.com/E7du/jdapp-launcher/</url>
 	<licenses>
 		<license>
