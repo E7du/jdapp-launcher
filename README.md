@@ -14,12 +14,12 @@ $ sh cplibs.sh
 ```bash
 .
 ├── conf
-│   ├── jf-app-cfg.conf
+│   ├── jf-app-cfg.conf / contains in services.jar
 │   ├── dubbo.properties
-│   ├── log4j.properties
+│   ├── log4j.properties / contains in services.jar
 │   ├── application.jdapp
 │   ├── jdapp-daemon{id}.pid
-│   └── {jf-app-cfg.conf:app.name}-provider.xml
+│   └── {jf-app-cfg.conf:app.name}-provider.xml / contains in services.jar
 ├── jdapp-launcher.sh
 ├── lib
 │   ├── *dependency libs
