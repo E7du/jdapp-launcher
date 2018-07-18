@@ -24,7 +24,7 @@ class DemoProvider {
 	@Test
 	void test() throws InterruptedException {
 		//-D${LOG4J_CFG} 
-		PropertyConfigurator.configure("src/test/resources/conf/log4j.properties");
+		PropertyConfigurator.configure("src/test/resources/log4j.properties");
 		
 		Launcher.laucher(new String[] {}) ;
 	}

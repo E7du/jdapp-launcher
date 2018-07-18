@@ -14,9 +14,13 @@ $ sh cplibs.sh
 ```bash
 .
 ├── conf
+<<<<<<< HEAD
 │   ├── jf-app-cfg.conf / contains in services.jar
 │   ├── dubbo.properties
 │   ├── log4j.properties / contains in services.jar
+=======
+│   ├── dubbo.properties
+>>>>>>> aeab1f1b9891d0777ca01edb4b9a1fc90cd44cba
 │   ├── application.jdapp
 │   ├── jdapp-daemon{id}.pid
 │   └── {jf-app-cfg.conf:app.name}-provider.xml / contains in services.jar
