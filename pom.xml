@@ -1,11 +1,13 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>cn.zhucongqi</groupId>
-  <artifactId>jdapp-launcher</artifactId>
-  <version>0.0.6</version>
-  <name>jdapp-launcher</name>
-  <description>The Java standalone Dubbo App (JDApp) launcher base on jf and jf-ext3.</description>
-  <url>https://github.com/E7du/jdapp-launcher/</url>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>cn.zhucongqi</groupId>
+	<artifactId>jdapp-launcher</artifactId>
+	<version>0.0.7</version>
+	<name>jdapp-launcher</name>
+	<description>The Java standalone Dubbo App (JDApp) launcher base on jf and jf-ext3.</description>
+	<url>https://github.com/E7du/jdapp-launcher/</url>
 	<licenses>
 		<license>
 			<name>The Apache License, Version 2.0</name>
@@ -29,9 +31,9 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<dubbo.version>2.6.2</dubbo.version>
-        <zookeeper.version>3.4.6</zookeeper.version>
-        <curator.version>2.8.0</curator.version>
-        <jfext3.version>3.0.8</jfext3.version>
+		<zookeeper.version>3.4.6</zookeeper.version>
+		<curator.version>2.8.0</curator.version>
+		<jfext3.version>3.0.8</jfext3.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -41,39 +43,39 @@
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
-    		<groupId>com.alibaba</groupId>
-   			<artifactId>dubbo</artifactId>
-    		<version>${dubbo.version}</version>
+			<groupId>com.alibaba</groupId>
+			<artifactId>dubbo</artifactId>
+			<version>${dubbo.version}</version>
 		</dependency>
 		<dependency>
-    		<groupId>org.apache.zookeeper</groupId>
-    		<artifactId>zookeeper</artifactId>
-    		<version>${zookeeper.version}</version>
-    		<exclusions>
-                <exclusion>
-                    <groupId>org.slf4j</groupId>
-                    <artifactId>slf4j-log4j12</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>log4j</groupId>
-                    <artifactId>log4j</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>io.netty</groupId>
-                    <artifactId>netty</artifactId>
-                </exclusion>
-            </exclusions>
+			<groupId>org.apache.zookeeper</groupId>
+			<artifactId>zookeeper</artifactId>
+			<version>${zookeeper.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.slf4j</groupId>
+					<artifactId>slf4j-log4j12</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>log4j</groupId>
+					<artifactId>log4j</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>io.netty</groupId>
+					<artifactId>netty</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
-   			<groupId>org.apache.curator</groupId>
-    		<artifactId>curator-framework</artifactId>
-    		<version>${curator.version}</version>
+			<groupId>org.apache.curator</groupId>
+			<artifactId>curator-framework</artifactId>
+			<version>${curator.version}</version>
 		</dependency>
 		<!-- test -->
 		<dependency>
-   			 <groupId>org.slf4j</groupId>
-   			 <artifactId>slf4j-nop</artifactId>
-    		<version>1.7.25</version>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-nop</artifactId>
+			<version>1.7.25</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>

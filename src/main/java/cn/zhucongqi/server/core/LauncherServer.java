@@ -19,6 +19,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.jfinal.ext.config.JFinalConfigExt;
 import com.jfinal.ext.config.StandaloneAppConfig;
+import com.jfinal.log.Log;
 
 import cn.zhucongqi.kits.AppKit;
 
@@ -30,6 +31,8 @@ import cn.zhucongqi.kits.AppKit;
 public final class LauncherServer implements IServer {
 
 	public static LauncherServer Server = new LauncherServer();
+	
+	private Log LOG = Log.getLog(LauncherServer.class);
 	
 	private String serverName = "";
 	private Integer serverId = 0;
@@ -61,7 +64,7 @@ public final class LauncherServer implements IServer {
 			AppKit.save(this);
 		}
 		
-		System.out.println(String.format("\nThe server `%s@%d` started!", this.serverName, this.serverId));
+		LOG.info(String.format("\nThe server `%s@%d` started!", this.serverName, this.serverId));
 		System.setProperty("java.net.preferIPv4Stack", "true");
 		classPathXmlApplicationContext = new ClassPathXmlApplicationContext(new String[]{String.format("conf/%s-provider.xml", this.serverName)});
 		classPathXmlApplicationContext.start();
