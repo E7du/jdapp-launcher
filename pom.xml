@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>cn.zhucongqi</groupId>
 	<artifactId>jdapp-launcher</artifactId>
-	<version>0.0.7</version>
+	<version>1.0.0</version>
 	<name>jdapp-launcher</name>
 	<description>The Java standalone Dubbo App (JDApp) launcher base on jf and jf-ext3.</description>
 	<url>https://github.com/E7du/jdapp-launcher/</url>
@@ -33,7 +33,7 @@
 		<dubbo.version>2.6.2</dubbo.version>
 		<zookeeper.version>3.4.6</zookeeper.version>
 		<curator.version>2.8.0</curator.version>
-		<jfext3.version>3.0.8</jfext3.version>
+		<jfext3.version>4.0.0</jfext3.version>
 	</properties>
 	<dependencies>
 		<dependency>

@@ -13,19 +13,19 @@
  * License for the specific language governing permissions and limitations under
  * the License.
 */
-package cn.zhucongqi.server.core;
+package cn.zhucongqi.jdapp.server.core;
 
 import com.jfinal.log.Log;
 
-import cn.zhucongqi.server.Main;
+import cn.zhucongqi.jdapp.server.Main;
 
 /**
- * Launcher.java
+ * JdappLauncher.java
  * @author Jobsz
  *
  */
 @SuppressWarnings("unused")
-public final class Launcher {
+public final class JdappLauncher {
 
 	/**
 	 * @param ids
@@ -46,14 +46,14 @@ public final class Launcher {
 			debug = (ids.length > 1) && (ids[1].equalsIgnoreCase("debug"));
 		}
 		
-		boolean ret = LauncherServer.Server.launchServer(id);
+		boolean ret = JdappLauncherServer.Server.launchServer(id);
 		
 		if (!ret) {
 			return;
 		}
 		
 		//get from http://www.network-science.de/ascii/
-		Log.getLog(Launcher.class).info("\n     _ ____    _    ____  ____    ____ _____  _    ____ _____ _____ ____  _ \n" + 
+		Log.getLog(JdappLauncher.class).info("\n     _ ____    _    ____  ____    ____ _____  _    ____ _____ _____ ____  _ \n" + 
 				"    | |  _ \\  / \\  |  _ \\|  _ \\  / ___|_   _|/ \\  |  _ \\_   _| ____|  _ \\| |\n" + 
 				" _  | | | | |/ _ \\ | |_) | |_) | \\___ \\ | | / _ \\ | |_) || | |  _| | | | | |\n" + 
 				"| |_| | |_| / ___ \\|  __/|  __/   ___) || |/ ___ \\|  _ < | | | |___| |_| |_|\n" + 

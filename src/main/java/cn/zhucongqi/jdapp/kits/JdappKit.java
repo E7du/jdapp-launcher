@@ -13,7 +13,7 @@
  * License for the specific language governing permissions and limitations under
  * the License.
 */
-package cn.zhucongqi.kits;
+package cn.zhucongqi.jdapp.kits;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -22,57 +22,57 @@ import java.lang.management.ManagementFactory;
 
 import com.jfinal.log.Log;
 
-import cn.zhucongqi.server.core.IServer;
+import cn.zhucongqi.jdapp.server.core.IJdappServer;
 
 /**
  * @author Jobsz
  */
-public final class AppKit {
+public final class JdappKit {
 
 	private static String daemon = "jdapp-daemon";
 	private static String format = "conf/%s%d.pid";
 	private static String application = "conf/application.jdapp";
-	private static Log log = Log.getLog(AppKit.class);
+	private static Log log = Log.getLog(JdappKit.class);
 	
 	private static boolean saveApplicationName(String applicationName) {
-		String fileName = String.format(AppKit.application, applicationName);
+		String fileName = String.format(JdappKit.application, applicationName);
 		File file = new File(fileName);
 		if (file.exists()) {
-			AppKit.log.info(fileName+" is exist.");
+			JdappKit.log.info(fileName+" is exist.");
 			return true;
 		}
 		try {
 			file.createNewFile();
 			FileOutputStream out = new FileOutputStream(file);
-			out.write(applicationName.getBytes("utf-8"));
+			out.write(applicationName.getBytes("UFT-8"));
 			out.close();
 		} catch (IOException ex) {
 			ex.printStackTrace();
-			AppKit.log.error(ex.getMessage());
+			JdappKit.log.error(ex.getMessage());
 			return false;
 		}
 		
 		return true;
 	}
 
-	private static boolean savePid(IServer server) {
-		String pid = AppKit.currentAppPid();  
+	private static boolean saveJdappPid(IJdappServer jdappServer) {
+		String pid = JdappKit.currentAppPid();  
 
-		String fileName = String.format(AppKit.format, AppKit.daemon, server.serverId());
+		String fileName = String.format(JdappKit.format, JdappKit.daemon, jdappServer.serverId());
 		File file = new File(fileName);
 		if (file.exists()) {
-			AppKit.log.info(fileName+" is exist.");
+			JdappKit.log.info(fileName+" is exist.");
 			return true;
 		}
 			
 		try {
 			file.createNewFile();
 			FileOutputStream out = new FileOutputStream(file);
-			out.write(pid.getBytes("utf-8"));
+			out.write(pid.getBytes("UFT-8"));
 			out.close();
 		} catch (IOException ex) {
 			ex.printStackTrace();
-			AppKit.log.error(ex.getMessage());
+			JdappKit.log.error(ex.getMessage());
 			return false;
 		}
 		return true;
@@ -82,7 +82,7 @@ public final class AppKit {
 		return ManagementFactory.getRuntimeMXBean().getName().split("@")[0]; 
 	}
 	
-	public static boolean save(IServer server) {
-		return AppKit.saveApplicationName(server.serverName()) && AppKit.savePid(server);
+	public static boolean save(IJdappServer jdappServer) {
+		return JdappKit.saveApplicationName(jdappServer.serverName()) && JdappKit.saveJdappPid(jdappServer);
 	}
 }

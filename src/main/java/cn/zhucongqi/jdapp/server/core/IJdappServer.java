@@ -13,14 +13,14 @@
  * License for the specific language governing permissions and limitations under
  * the License.
 */
-package cn.zhucongqi.server.core;
+package cn.zhucongqi.jdapp.server.core;
 
 /**
- * IServer.java
+ * IJdappServer.java
  * @author Jobsz
  *
  */
-public interface IServer {
+public interface IJdappServer {
 
 	public String serverName();
 	

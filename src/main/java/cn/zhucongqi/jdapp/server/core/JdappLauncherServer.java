@@ -13,7 +13,7 @@
  * License for the specific language governing permissions and limitations under
  * the License.
 */
-package cn.zhucongqi.server.core;
+package cn.zhucongqi.jdapp.server.core;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -21,25 +21,25 @@ import com.jfinal.ext.config.JFinalConfigExt;
 import com.jfinal.ext.config.StandaloneAppConfig;
 import com.jfinal.log.Log;
 
-import cn.zhucongqi.kits.AppKit;
+import cn.zhucongqi.jdapp.kits.JdappKit;
 
 /**
- * LauncherServer.java
+ * JdappLauncherServer.java
  * @author Jobsz
  *
  */
-public final class LauncherServer implements IServer {
+public final class JdappLauncherServer implements IJdappServer {
 
-	public static LauncherServer Server = new LauncherServer();
+	public static JdappLauncherServer Server = new JdappLauncherServer();
 	
-	private Log LOG = Log.getLog(LauncherServer.class);
+	private Log LOG = Log.getLog(JdappLauncherServer.class);
 	
 	private String serverName = "";
 	private Integer serverId = 0;
 
 	private ClassPathXmlApplicationContext classPathXmlApplicationContext = null;
 
-	private LauncherServer() {}
+	private JdappLauncherServer() {}
 	
 	@Override
 	public String serverName() {
@@ -61,7 +61,7 @@ public final class LauncherServer implements IServer {
 		this.serverId = serverId;
 		
 		if (ret) {
-			AppKit.save(this);
+			JdappKit.save(this);
 		}
 		
 		LOG.info(String.format("\nThe server `%s@%d` started!", this.serverName, this.serverId));

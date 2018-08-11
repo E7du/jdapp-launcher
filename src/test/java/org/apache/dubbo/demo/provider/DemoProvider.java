@@ -17,7 +17,7 @@ package org.apache.dubbo.demo.provider;
 import org.apache.log4j.PropertyConfigurator;
 import org.junit.jupiter.api.Test;
 
-import cn.zhucongqi.server.core.Launcher;
+import cn.zhucongqi.jdapp.server.core.JdappLauncher;
 
 class DemoProvider {
 
@@ -26,7 +26,7 @@ class DemoProvider {
 		//-D${LOG4J_CFG} 
 		PropertyConfigurator.configure("src/test/resources/log4j.properties");
 		
-		Launcher.laucher(new String[] {}) ;
+		JdappLauncher.laucher(new String[] {}) ;
 	}
 
 }

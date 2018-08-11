@@ -13,9 +13,9 @@
  * License for the specific language governing permissions and limitations under
  * the License.
 */
-package cn.zhucongqi.server;
+package cn.zhucongqi.jdapp.server;
 
-import cn.zhucongqi.server.core.Launcher;
+import cn.zhucongqi.jdapp.server.core.JdappLauncher;
 
 /**
  * @author Jobsz
@@ -27,7 +27,7 @@ public class Main {
 	 * @throws InterruptedException 
 	 */
 	public static void main(String[] ids) throws InterruptedException {
-		Launcher.laucher(ids);
+		JdappLauncher.laucher(ids);
 	}
 
 }

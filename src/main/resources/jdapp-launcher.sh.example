@@ -22,7 +22,7 @@ start)
          exit 0
       fi
     fi
-	${JAVA_CMD} -cp ${CPATH} -server -D${DUBBO_CFG} cn.zhucongqi.server.Main ${ID} &
+	${JAVA_CMD} -cp ${CPATH} -server -D${DUBBO_CFG} cn.zhucongqi.jdapp.server.Main ${ID} &
 	;;
 stop)
 	echo "Stoping Server ${APPNAME}@${ID}..."
