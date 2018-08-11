@@ -14,7 +14,6 @@
  * the License.
 */
 package org.apache.dubbo.demo.provider;
-import org.apache.log4j.PropertyConfigurator;
 import org.junit.jupiter.api.Test;
 
 import cn.zhucongqi.jdapp.server.core.JdappLauncher;
@@ -23,9 +22,6 @@ class DemoProvider {
 
 	@Test
 	void test() throws InterruptedException {
-		//-D${LOG4J_CFG} 
-		PropertyConfigurator.configure("src/test/resources/log4j.properties");
-		
 		JdappLauncher.laucher(new String[] {}) ;
 	}
 
