@@ -37,14 +37,10 @@ public final class JdappKit {
 	private static boolean saveApplicationName(String applicationName) {
 		String fileName = String.format(JdappKit.application, applicationName);
 		File file = new File(fileName);
-		if (file.exists()) {
-			JdappKit.log.info(fileName+" is exist.");
-			return true;
-		}
 		try {
 			file.createNewFile();
 			FileOutputStream out = new FileOutputStream(file);
-			out.write(applicationName.getBytes("UFT-8"));
+			out.write(applicationName.getBytes("UTF-8"));
 			out.close();
 		} catch (IOException ex) {
 			ex.printStackTrace();
@@ -60,15 +56,10 @@ public final class JdappKit {
 
 		String fileName = String.format(JdappKit.format, JdappKit.daemon, jdappServer.serverId());
 		File file = new File(fileName);
-		if (file.exists()) {
-			JdappKit.log.info(fileName+" is exist.");
-			return true;
-		}
-			
 		try {
 			file.createNewFile();
 			FileOutputStream out = new FileOutputStream(file);
-			out.write(pid.getBytes("UFT-8"));
+			out.write(pid.getBytes("UTF-8"));
 			out.close();
 		} catch (IOException ex) {
 			ex.printStackTrace();
